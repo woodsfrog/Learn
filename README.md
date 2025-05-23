@@ -22,7 +22,7 @@ Dify 是一个开源的 LLM 应用开发平台，全称 Dify.AI，旨在帮助�
 
 <div align="center">
     <a href="https://github.com/langgenius/dify">Dify Github</a>·
-    <a href="https://docs.dify.ai">文档</a> 
+    <a href="https://docs.dify.ai">Dify文档</a> 
 </div>
 
 
