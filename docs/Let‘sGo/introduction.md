@@ -71,7 +71,7 @@
 
 在本项目完成时，通过GET获取电影信息，会返回以下内容响应。
 
-``` git
+``` 
 $ curl -H "Authorization: Bearer RIDBIAE3AMMK5716IAEBUGA7XQ" localhost:4000/v1/movies/1
 {
     "movie":{
@@ -89,3 +89,18 @@ $ curl -H "Authorization: Bearer RIDBIAE3AMMK5716IAEBUGA7XQ" localhost:4000/v1/m
 ```
 
 本书使用PostgreSQL作为存储的数据库。
+
+这个项目作者是Alex Edwards，一位全栈式 Web 开发人员和作家。下面是他的blog和github网页地址。
+<div align="center">
+    <a href="https://github.com/alexedwards/">github</a>·
+    <a href="https://www.alexedwards.net/blog">blog</a>
+</div>
+
+# 运行环境软件的安装
+- pycharm运行项目实例
+- Go的主要版本（1.23版）「可通过输入go version查询」
+- curl工具，用于处理终端HTTP请求和响应。「可输入curl --version查询」
+- hey工具，用于执行负载测试
+- git版本控制系统
+- chrome浏览器，易于开发的web浏览器
+- 文本编辑器

@@ -8,11 +8,13 @@ Go（又称 Golang） 是由 Google 于 2009 年发布的一种开源编程语�
 
 本文使用Let's Go Further (v1_23_0) -- Alex Edwards -- 2024 为教程学习
 
-项目出现的运行资源在apps目录下
+项目出现的运行资源在Projects目录下，本项目使用JSON，PostgreSQL。
 
 [01-介绍](/docs/Let‘sGo/introduction.md)
-- 这一章主要介绍了
+- 这一章主要介绍了项目代码框架，作者名称及github账号，需要配置的软件及环境
 
+[02-开始](/docs/Let‘sGo/GetStarted.md)
+-
 
 ## Dify代码解析
 
