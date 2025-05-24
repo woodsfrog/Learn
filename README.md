@@ -19,7 +19,7 @@ Let’s Go 2nd Edition-2022 为教程学习
 - 这一章主要介绍了项目代码框架，作者名称及github账号，需要配置的软件及环境
 
 [02-开始](/docs/Let‘sGoFurther/GetStarted.md)
-- 主要介绍了
+- 主要介绍了如何创建项目框架目录结构、创建HTTP服务器及监听、引入合理的管理配置和使用httprouter帮助API端点实现RESful结构。
 
 ## Dify代码解析
 
