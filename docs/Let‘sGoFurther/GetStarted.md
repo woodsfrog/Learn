@@ -76,16 +76,16 @@ $ go run ./cmd/api
 首先，我们将服务器配置为只有一个终端节点：/v1/healthcheck。此端点返回有关我们API的一些基本信息，包含其当前版本号和作业环境。
 
 <table style="width: 100%">
-    <th>
-        <tr align="center">URl Pattern</tr>
-        <tr align="center">Handler</tr>
-        <tr align="center">Action</tr>
-    </th>
-    <th>
-        <tr align="center">URl Pattern</tr>
-        <tr align="center">healthcheckHandle</tr>
-        <tr align="center">显示程序信息</tr>
-    </th>
+    <tr>
+        <th align="center">URl Pattern</th>
+        <th align="center">Handler</th>
+        <th align="center">Action</th>
+    </tr>
+    <tr>
+        <th align="center">URl Pattern</th>
+        <th align="center">healthcheckHandle</th>
+        <th align="center">显示程序信息</th>
+    </tr>
 </table>
 
 打开cmd/api/main.go文件将‘Hello world！'替换为以下代码：
