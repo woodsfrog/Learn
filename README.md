@@ -8,12 +8,20 @@ Go（又称 Golang） 是由 Google 于 2009 年发布的一种开源编程语�
 ### Let‘s Go（Go基础学习）
 Let’s Go 2nd Edition-2022 为教程学习
 
-### Let‘s Go Further（项目教程）
+项目出现的运行资源在Projects目录下，项目名称snippetbox。
 
+[01-介绍](/docs/Let'sGo/Introduction.md)
+- 11111
+
+
+[02-基础](/docs/Let'sGo/Foundations.md)
+- 222222
+
+### Let‘s Go Further（项目教程）
 
 本文使用Let's Go Further (v1_23_0) -- Alex Edwards -- 2024 为教程学习
 
-项目出现的运行资源在Projects目录下，本项目使用JSON，PostgreSQL。
+项目出现的运行资源在Projects目录下，项目名称greenlight，本项目使用JSON，PostgreSQL。
 
 [01-介绍](/docs/Let‘sGoFurther/introduction.md)
 - 这一章主要介绍了项目代码框架，作者名称及github账号，需要配置的软件及环境
@@ -35,6 +43,17 @@ Dify 是一个开源的 LLM 应用开发平台，全称 Dify.AI，旨在帮助�
 
 [01-install](/docs/Dify/install.md)
 - 主要介绍了
+
+## FastAPI
+<div align="center">
+    <a href="https://fastapi.tiangolo.com/">FastAPI文档</a>·
+    <a href="https://github.com/fastapi/fastapi">FastAPI源代码</a> 
+</div>
+<div align="center">
+    <a href="https://www.youtube.com/watch?v=0sOvCWFmrtA">「Youtube」Python API Development - Comprehensive Course for Beginners</a>·
+</div>
+
+
 
 
 ## 杂项
