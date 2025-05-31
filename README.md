@@ -5,6 +5,13 @@ Go（又称 Golang） 是由 Google 于 2009 年发布的一种开源编程语�
 
 它的目标是结合 Python 的简洁性 与 C/C++ 的高性能，特别适合构建高并发、高性能的服务器端程序。
 
+### The Little Go Book
+《The Little Go Book》是一本免费的 Google Go 编程语言入门书。它的目标读者是那些可能不太熟悉指针和静态类型概念的开发者。
+
+[01-基础](/docs/LittleGo/TheBasics.md)
+- 11111
+
+
 ### Let‘s Go（Go基础学习）
 Let’s Go 2nd Edition-2022 为教程学习
 

@@ -202,5 +202,30 @@ func main() {
 
 因此，如果你有路由模式 “/{$}”，它实际上意味着匹配一个斜杠，后面没有其他任何东西。它只会匹配 URL 路径正好为 / 的请求。
 
+```git
+File: main.go
+----------------
+package main
+...
+func main() {
+    mux := http.NewServeMux()
+    mux.HandleFunc("/{$}", home) // 将此路由限制在仅在/上精确
+    mux.HandleFunc("/snippet/view", snippetView)
+    mux.HandleFunc("/snippet/create", snippetCreate)
+
+    log.Print("starting server on :4000")
+
+    err := http.ListenAndServe(":4000", mux)
+    log.Fatal(err)
+}
+```
+完成该更改后，重新启动服务器并请求未注册的 URL 路径，例如 http://localhost:4000/foo/bar。您现在应该会收到一个 404 响应
+
+### 其他信息
+请求 URL 路径会自动清理。如果请求路径包含任何 .或。。元素或重复的斜杠，用户将自动重定向到等效的干净 URL。例如，如果用户向 /foo/bar/.baz 他们将自动收到 301 永久重定向到 /foo/baz。
+
+如果已注册子树路径，并且收到该子树路径的请求，而没有尾部斜杠，则将自动向用户发送 301 永久重定向到添加了斜杠的子树路径。例如，如果您已注册子树路径 /foo/，则对 /foo 的任何请求都将重定向到 /foo/。
+
+
 
 
