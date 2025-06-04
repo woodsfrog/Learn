@@ -47,6 +47,90 @@ Go 对导入包很严格。如果你导入了一个包但不使用它，它不�
 
 ## 变量和声明
 在 Go 中处理变量声明和赋值最明确的方法也是最冗长的
+举个例子：
+```git
+package main
+
+import(
+    "fmt"
+)
+
+func main() {
+    var power int
+    power = 9000
+    fmt.Printf("It's over %d\n",power)
+}
+
+```
+这个例子，声明了一个名为power的变量，类型为int。 默认情况，Go会将变量初始化为零值，整数初始化为0，布尔值初始化为false，字符串初始化为“”等。
+接下来，我们将9000赋值给power变量，我们可以将前两行合并：`var power int =9000`
+
+但是仍然很长，Go提供了一种短变量声明：`power := 9000`
+
+这种声明也可以适用于函数：
+```git
+func main() {
+    power := getPower()
+}
+
+func  getPower() int{
+    return 9001
+}
+```
+
+对于：=的使用，要注意其适用于声明变量并为其赋值，且一个变量在同一个域内不能被声明两次。
+
+我们使用 :=，但在后续赋值时，我们使用赋值运算符 =。这很有道理，但当你需要在两者之间切换时可能会有些棘手。 如果你仔细阅读错误信息，你会发现变量是复数形式。这是因为 Go 允许你同时赋值多个变量（可以使用 = 或 :=）。
+```git
+func main () {
+    power := 1000
+    fmt.Printf("default power is %d\n",power)
+
+    name, power := "GoKu",9000
+    fmt.Printf("%s's power is over %d\n", name, power)
+}
+```
+
+目前，请记住当你声明一个变量并使用其零值时使用 `var NAME TYPE`，当你声明并赋值一个值时使用 `NAME := VALUE`，当你给之前声明的变量赋值时使用 `NAME = VALUE`。
+
+## 函数声明
+下面是一个指出函数返回多个值的例子。其中有三个函数：一个没有返回值的函数，一个有一个返回值的函数，以及一个有两个返回值的函数。
+```git
+func log(message string){
+}
+
+func add(a int, b int) int {
+}
+
+func power(name string) (int, bool){
+}
+```
+我们在最后一个函数输入：
+```git
+value, exists := power("goku")
+if exists == false {
+    // handle this error case
+}
+```
+
+有时，只注意返回值中的一个，在这种情况下，可以讲其他值赋予_：
+```git
+_, exists := power("goku")
+if exists == false {
+    // handle this error case
+}
+```
+
+这不仅仅是一个约定。_, 空标识符，在这一点上特别之处在于返回值实际上并没有被赋值。这让你可以无论返回类型如何，都可以反复使用 _。
+
+然后还有一种更简短地语法：
+```git
+func add(a,b int) int {
+
+}
+```
+
+能够返回多个值是你经常会用到的功能。你也会经常使用 _ 来丢弃一个值。命名返回值和稍微不那么冗长的参数声明并不常见。尽管如此，你很快就会遇到这些内容，因此了解它们是很重要的。
 
 
 
