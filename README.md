@@ -15,7 +15,7 @@ Go（又称 Golang） 是由 Google 于 2009 年发布的一种开源编程语�
 - 在这一章中，介绍了结构体，如何使结构体的一个实例成为函数的接收者，并且增加了对我们现有的Go类型系统知识的指针。
 
 [03-数组、切片和映射](/docs/LittleGo/MapsArraysSlices.md)
--在这一章，
+- 在这一章，
 
 ### Let‘s Go（Go基础学习）
 Let’s Go 2nd Edition-2022 为教程学习
