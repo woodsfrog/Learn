@@ -90,5 +90,82 @@ func main() {
 
 分数的初始容量是5。为了容纳25个值，它将需要扩展3次，容量分别为10，20和最后40。
 
+再来一个例子：
+```
+func main(){
+    scores := make([]int, 5)
+    scours = append(scores, 9332)
+    fmt.Println(scores)
+}
+```
+这里，输出将会是[0, 0, 0, 0, 0, 9332]。也许你认为应该是[9332, 0, 0, 0, 0]？
+
+对人类来说，这可能看起来合乎逻辑。但对于编译器来说，你告诉它将一个值追加到已经包含5个值的切片中。
+
+最终，初始化一个切片有四种常见的方法：
+```
+names := []string{"leto","jessica","paul"}
+checks := make([]bool, 10)
+var name []string
+scores := make([]int, 5)
+```
+你在什么时候使用哪个？第一个通常不需要太多解释。当你已经知道数组中想要的值时，就使用这个。
+
+第二个在你要写入切片的特定索引时很有用。例如：
+```
+func extractPowers(saiyans []*Saiyan) []int {
+    powers := make([]int, len(saiyans))
+    for index, saiyan := range saiyans{
+        powers.index = saiyan.Power
+    }
+    return powers
+}
+```
+
+第三种情况是一个空切片，并且在与 append 方法结合使用时，当元素的数量未知时会用到。
+
+最后一种情况让我们可以指定初始容量；如果我们大致知道需要多少个元素时会很有用。
+
+即使你知道大小，也可以使用 append。这主要取决于个人偏好：
+```
+func extractPowers(saiyans, []*Saiyan) []int {
+    powers := make([]int, 0, len(saiyans))
+    for _, saiyan := range saiyans{
+        powers = apennd(powers, saiyan.Power)
+    } 
+    return powers
+}
+```
+切片作为数组的包装器是一个强大的概念。许多语言都有数组切片的概念。JavaScript 和 Ruby 的数组都有切片方法。你也可以在 Ruby 中通过 [START..END] 或在 Python 中通过 [START:END] 获取切片。然而，在这些语言中，切片实际上是一个新的数组，其中包含原始数组的值的复制。
+
+如果我们拿 Ruby 来说，以下代码的输出是什么？
+```
+scores = [1,2,3,4,5]
+slice = scores[2..4]
+slice[0] = 999
+puts scores
+```
+答案是 [1, 2, 3, 4, 5]。这是因为切片是一个完全新的数组，包含值的副本。现在，考虑
+
+Go 的等价物：
+```
+scores := []int{1,2,3,4,5}
+slice := scores[2:4]
+slice[0] = 999
+fmt.Println(scores)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
